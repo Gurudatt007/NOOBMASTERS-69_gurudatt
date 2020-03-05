@@ -1,2 +1,2 @@
-# NOOBMASTERS-69_gurudatt
+# syrushacks
 project on second hand book selling

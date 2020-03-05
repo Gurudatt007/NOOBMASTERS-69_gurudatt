@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHECKOUT</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/checkout.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<a href="shoppingsite.html"></a>
+<a href="cart.html"></a>
+<a href="branch.html"></a>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button" onclick="window.location.href='branch.html'"><b>VESIT</b> Books</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button">Profile</a>
+      <a href="#about" class="w3-bar-item w3-button">Cart</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px ;" id="home">
+  <img class="w3-image" src="vesit.jpg" alt="VESIT" width="1500" height="300">
+</header>
+
+    <style>
+      #checkoutMethods {
+        background: #fff;
+        border-radius: 2px;
+        display: inline-block;
+        max-height: 700px;
+        margin: 1rem;
+        position: relative;
+        width: 700px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+      }
+    </style>
+</head>
+</body>
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px ;" id="Cart">
+ <body>
+    
+    <div class="container">
+    <section>
+      <div class="row" id="tablerow">
+      <div class="col-md-4 col-xs-12">
+        <div class="panel panel-primary">
+        </div>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <table class="table">
+        <div>
+          <tr>
+            <td><h4>Selling Summary</h4></td>
+          </tr>
+        </div>
+        <div>
+         <tr>
+            <td>
+                <tr>
+                  <td>KUMBHOJKAR MATHS-4</td>
+                  <td>Rs.250</td>
+                </tr>
+              
+            </td>
+         </tr>
+     </div>
+     <div>
+         <tr>
+            <td><strong>Total Cost</strong> </td>
+            <td> <strong>Rs.250</strong></td>
+          </tr>
+      </div>
+        </table>
+        <form method="POST" action="{%url'shopping_cart:process_payment' order_id%}">
+        </form>
+        <input type="submit" style="width:100%"; class="button" onclick="window.location.href = 'sell.html';"value="Sell More"><br><br>
+
+        <button onclick="window.location.href = 'sellmessage.html';" style="width: 100%;">Confirm Order</button>
+      </div>
+     </div>
+    </section>
+</div></body></header>
+</body>
+</html>
