@@ -1,1 +1,66 @@
 <html>
+<body>
+    <a href="cart.html"></a>
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="#home" class="w3-bar-item w3-button" onclick="window.location.href='branch.html'"><b>VESIT</b> Books</a>
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="#projects" class="w3-bar-item w3-button" onclick="window.location.href='profile.html'">Profile</a>
+        <a href="#about" class="w3-bar-item w3-button" onclick="window.location.href='cart.html'" >Cart</a> 
+      </div>   
+    </div>       
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px ;" id="home">
+    <img class="w3-image" src="vesit.jpg" alt="VESIT" width="1500" height="300">
+    <!--<div class="w3-display-middle w3-margin-top w3-center">
+      <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>VESIT</b></span> <span class="w3-hide-small w3-text-light-grey">Books</span></h1>
+    </div>-->
+  </header>
+    <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card">
+  <h1>{{user name}}</h1>
+  <p class="title">Student</p>
+  <p>VESIT, Chembur</p>
+  <p>These are your previous transactions</p>
+</div>
+    {% extends 'base.html' %}
+
+    {% block content %}
+    
+    <table class="table table-hover table-bordered text-center">
+          <tr class="text-center">
+            <th>Date Ordered</th>
+            <th>Reference Code</th>
+            <th>Items</th>
+            <th>Price</th>
+          </tr>
+          {% for order in my_orders %}
+            <tr>
+              <td>20/02/2020</td>
+              <td>123456</td>
+              <td>
+                das
+                eccf
+                am-3
+                </td>
+              <td>500</td>
+    
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan= 4> You have no orders.</td>
+            </tr>
+          {% endfor %}
+    
+          <tr>
+            <td colspan=4>
+              <a href="{% url 'products:product-list' %}" class="btn btn-warning pull-left" onclick="window.location.href='shoppingsite.html'">Continue Shopping
+              </a> 
+              <a href="{% url 'products:product-list' %}" class="btn btn-warning pull-left" onclick="window.location.href='shoppingsite.html'"></a>Add Items to Cart {% endif %}
+            </td>
+          </tr>
+        </table>
+    </body>
+    {% endblock content %}
